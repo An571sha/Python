@@ -1,10 +1,13 @@
-x = 4.0
-myVare = 4 *1 *3
-
-if x == 4.0:
-    print("less than 3")
-else:
-    print(myVare)
-print(type(x))
-print(id(x))
+from random import randint
+answer = randint(1,10)
+guess = int(input("Guess a number between 1 and 10:"))
+number = False
+while(number):
+    if(guess<answer):
+        print("go higher")
+    elif(answer>guess) :
+        print("go lower")
+    else:
+        print("correct")
+        number =True
     
