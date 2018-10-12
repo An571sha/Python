@@ -1,3 +1,3 @@
 import math
-import numpy
+import numpy a
 print(math.sin(90))
