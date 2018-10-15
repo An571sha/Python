@@ -24,3 +24,5 @@ abplot = abline(slope,intercept);
 
 ######------
 #linear_regression
+xeintraege = np.array[10,20,30,40,50,60,70,80]
+yeintaege = np.array[20,40,60,80,100,120,140]
