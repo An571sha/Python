@@ -30,8 +30,9 @@ for filename in glob.glob(weg):
     standardabweichung = np.sqrt(sum((Spannung-mittelwert)**2)/(NS-1));
     arrayMittelwert[i] = mittelwert
     i = i+1
-    print("mittelwert:{}".format(mittelwert))
-    print("standardabweichung:{}".format(standardabweichung))
+
+print("mittelwert:{}".format(mittelwert))
+print("standardabweichung:{}".format(standardabweichung))
     
 
 p.plot(arrayDis,arrayMittelwert)

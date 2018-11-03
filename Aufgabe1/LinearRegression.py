@@ -22,13 +22,14 @@ for filename in glob.glob(os.path.join("/Users/animesh/Desktop/Python/Aufgabe1/a
     mittelwert = sum(Spannung)/NS
     arrayMittelWert[i]= mittelwert
     i = i+1
+
 #Logartimieren----------------------------------------------------------------------------------------------------------------
 
 logSpannung = np.log(arrayMittelWert)
 logdist = np.log(arrayDis) 
     
-print(logSpannung)
-print(logdist)
+print("LogSpannung:{}".format(logSpannung))
+print("Logdist:{}".format(logdist))
    
 
 
@@ -48,6 +49,8 @@ for i in range(len(logSpannung)):
 
 a = a1/a2                     
 b = meanLogDist - a*meanLogSpannung 
+
+#Plotten-----------------------------------------------------------------------------------------------------------------------
 p.figure(1) 
 p.plot(logdist,[a * x for x in logdist])
 
@@ -55,6 +58,5 @@ print("a:",a)
 print("b:",b)    
 
 p.figure(2)
-p.plot( arrayDis,[np.exp(a * x + b) for x in logdist])
-
+p.plot(arrayMittelWert,[np.exp(a * x + b) for x in logSpannung])
 p.show()
